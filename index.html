@@ -1,20 +1,99 @@
----
-layout: default
----
-
-
-{% include career-profile.html %}
-
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
-
-{% include experiences.html %}
-
-{% include projects.html %}
-
-{% include oss-contributions.html %}
-
-{% include publications.html %}
-
-{% include skills.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .intro, .portfolio, .contact {
+            margin-bottom: 2rem;
+        }
+        .intro h1, .portfolio h2, .contact h2 {
+            color: #333;
+        }
+        .portfolio-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .portfolio-item {
+            flex: 1 1 calc(33.333% - 1rem);
+            margin: 0.5rem;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h1>Hello, I'm Minjeong Kim</h1>
+            <p>Welcome to my portfolio website. I’m a game developer programmer with a passion for game development. Here you’ll find examples of my work, skills, and contact information.</p>
+        </section>
+        
+        <section class="portfolio">
+            <h2>My Work</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>If you’d like to get in touch, please email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
